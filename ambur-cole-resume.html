@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ambur Cole — Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,500&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F3EFE6;
+    --card: #ECE5D4;
+    --ink: #262220;
+    --ink-soft: #454039;
+    --gray: #726A5E;
+    --rule: #DCD4C2;
+    --amber-900: #7A4110;
+    --amber-700: #9E551A;
+    --amber-600: #B5691E;
+    --amber-300: #D9A868;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #211C16;
+      --card: #2B2419;
+      --ink: #F1ECE2;
+      --ink-soft: #D9D1C2;
+      --gray: #B3A996;
+      --rule: #43392A;
+      --amber-900: #F0C393;
+      --amber-700: #E7A85E;
+      --amber-600: #E7A85E;
+      --amber-300: #B5691E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #211C16;
+    --card: #2B2419;
+    --ink: #F1ECE2;
+    --ink-soft: #D9D1C2;
+    --gray: #B3A996;
+    --rule: #43392A;
+    --amber-900: #F0C393;
+    --amber-700: #E7A85E;
+    --amber-600: #E7A85E;
+    --amber-300: #B5691E;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  body {
+    font-family: "PT Sans", "Liberation Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .sheet {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 44px 28px 60px 28px;
+  }
+
+  @media (max-width: 600px) {
+    .sheet { padding: 28px 18px 44px 18px; }
+  }
+
+  /* ---------- Header ---------- */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--amber-600);
+  }
+  .name {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 2.15rem;
+    color: var(--ink);
+    letter-spacing: 0.2px;
+    margin: 0;
+  }
+  .headline {
+    margin-top: 5px;
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: var(--amber-700);
+  }
+  .title-line {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    letter-spacing: 0.6px;
+    color: var(--gray);
+  }
+  .contact-block {
+    text-align: right;
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.6;
+    padding-bottom: 3px;
+  }
+  @media (max-width: 600px) {
+    .contact-block { text-align: left; }
+  }
+
+  /* ---------- Sections ---------- */
+  .section { margin-top: 30px; }
+  .section-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--amber-900);
+    margin: 0 0 10px 0;
+  }
+
+  .summary {
+    margin-top: 14px;
+    color: var(--ink-soft);
+    font-size: 1rem;
+  }
+
+  /* ---------- Core expertise ---------- */
+  .expertise-box {
+    margin-top: 12px;
+    border: 1px solid var(--amber-300);
+    background: var(--card);
+    border-radius: 6px;
+    padding: 18px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 26px;
+    row-gap: 11px;
+  }
+  @media (max-width: 560px) {
+    .expertise-box { grid-template-columns: 1fr; }
+  }
+  .expertise-box .tag {
+    font-size: 0.96rem;
+    color: var(--ink-soft);
+    padding-left: 16px;
+    position: relative;
+  }
+  .expertise-box .tag::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 7px;
+    height: 7px;
+    background: var(--amber-600);
+    border-radius: 1px;
+  }
+
+  /* ---------- Experience ---------- */
+  .role { margin-top: 26px; }
+  .role-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 2px 14px;
+  }
+  .role-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.08rem;
+    color: var(--ink);
+  }
+  .role-title .co { color: var(--amber-700); }
+  .role-dates {
+    font-size: 0.9rem;
+    color: var(--amber-600);
+    font-weight: 700;
+    white-space: nowrap;
+    font-family: "Poppins", sans-serif;
+  }
+  .role-context {
+    font-style: italic;
+    color: var(--gray);
+    font-size: 0.93rem;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+  ul.bullets { margin: 0; padding: 0; list-style: none; }
+  ul.bullets li {
+    position: relative;
+    padding-left: 17px;
+    margin-bottom: 6px;
+    color: var(--ink-soft);
+    font-size: 0.97rem;
+  }
+  ul.bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    background: var(--amber-600);
+    border-radius: 1px;
+  }
+
+  .role-divider {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 24px 0 0 0;
+  }
+
+  /* ---------- Earlier experience ---------- */
+  .earlier-item { margin-top: 14px; }
+  .earlier-head {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2px 14px;
+    font-size: 0.95rem;
+  }
+  .earlier-head .role-title { font-size: 1rem; }
+  .earlier-desc {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin-top: 2px;
+  }
+
+  /* ---------- Footer ---------- */
+  .footer-band {
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 2px solid var(--amber-600);
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .footer-col { flex: 1 1 260px; }
+  .footer-label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--amber-900);
+    margin-bottom: 6px;
+  }
+  .footer-text {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+  .edu-line {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+  }
+  .edu-line .school { font-weight: 700; color: var(--ink); }
+
+  @media print {
+    body { background: var(--paper); }
+    .sheet { max-width: none; padding: 0.4in 0.5in; }
+    .role { break-inside: avoid; }
+    .earlier-item { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="header">
+    <div class="name-block">
+      <p class="name">Ambur Cole</p>
+      <div class="headline">I build revenue engines at business inflection points.</div>
+      <div class="title-line">GROWTH MARKETING / DEMAND GENERATION / PRODUCT MARKETING</div>
+    </div>
+    <div class="contact-block">
+      <div>Denver, CO &nbsp;&nbsp;(303) 949-3297</div>
+      <div>heyambur@icloud.com</div>
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:22px;">
+    <p class="summary">I build high-performing marketing engines that turn strategy into measurable pipeline. Over 22+ years, I've led demand generation, product marketing, and brand strategy across growth-stage and enterprise SaaS — building revenue engines at business inflection points, transitioning organizations from sales-led to marketing-led GTM, and driving consistent double-digit pipeline growth in complex B2B and B2B2C environments. I thrive at the intersection of message and mechanism, shaping the story and architecting the engine behind it, with a structured, modern approach to growth and a deep bias for aligned execution across Sales, Product, and RevOps.</p>
+  </div>
+
+  <div class="section">
+    <p class="section-title">Core Expertise</p>
+    <div class="expertise-box">
+      <div class="tag">Demand generation &amp; acquisition</div>
+      <div class="tag">PLG &amp; lifecycle marketing</div>
+      <div class="tag">Pipeline strategy &amp; funnel conversion</div>
+      <div class="tag">Marketing operations &amp; attribution</div>
+      <div class="tag">Product marketing &amp; positioning</div>
+      <div class="tag">Team building &amp; global leadership</div>
+      <div class="tag">AI product launches</div>
+      <div class="tag">Account-based marketing</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-title">Professional Experience</p>
+
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title"><span class="co">RecVue</span> — Head of Growth Marketing</div>
+        <div class="role-dates">July 2025–Present</div>
+      </div>
+      <div class="role-context">Enterprise SaaS platform for complex revenue operations. Leads growth marketing across demand, product marketing, content, lifecycle, sales enablement, and operations; reports to the CMO.</div>
+      <ul class="bullets">
+        <li>Built the demand engine from a minimal baseline; marketing sourced 10 of 14 tracked opportunities (~71%) in the September 2026 pipeline snapshot.</li>
+        <li>Generated approximately $1.62M in marketing-sourced opportunity value across paid search, organic/AEO, content syndication, and Salesforce AgentExchange, including one closed-won customer in the September 2026 roll-up.</li>
+        <li>Led go-to-market launches for RevOS and Agentic RevOS, translating complex AI capabilities into positioning, campaign messaging, content, and sales enablement with Product and Sales.</li>
+        <li>Built acquisition and nurture programs across paid search, LinkedIn, content syndication, and SEO/AEO; developed persona and solution-based journeys to convert content engagement into sales conversations.</li>
+        <li>Designed full-funnel reporting, attribution, qualification, and stage discipline in Salesforce; use channel conversion data to prioritize spend and address gaps from inquiry through opportunity.</li>
+        <li>Lead a lean internal team supported by specialist agencies and contractors; extend execution capacity with AI-assisted research, content development, and campaign workflows.</li>
+      </ul>
+    </div>
+    <hr class="role-divider">
+
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title"><span class="co">Postie</span> — VP of Marketing</div>
+        <div class="role-dates">2022–2024</div>
+      </div>
+      <div class="role-context">Martech platform serving brands and agencies. Joined as the first marketing hire, reporting to the CEO, and built the marketing function.</div>
+      <ul class="bullets">
+        <li>Built marketing-sourced pipeline contribution to approximately 52% within the first year; established demand generation, product marketing, content, and lifecycle programs.</li>
+        <li>Defined ICP, TAM, and buyer journeys; built attribution and the martech stack to connect investment with pipeline performance.</li>
+        <li>Built a multidisciplinary team and contractor model; owned budget, sales enablement, and cross-functional go-to-market alignment.</li>
+      </ul>
+    </div>
+    <hr class="role-divider">
+
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title"><span class="co">TrackVia</span> — Senior Director, Marketing</div>
+        <div class="role-dates">2021–2022</div>
+      </div>
+      <div class="role-context">Low-code workflow platform serving SMB, mid-market, and enterprise customers.</div>
+      <ul class="bullets">
+        <li>Rebuilt the growth engine across performance marketing, lifecycle, and product-led acquisition, supporting self-serve and sales-assisted motions.</li>
+        <li>Aligned messaging and the go-to-market roadmap with pipeline goals; tuned channel mix to increase SQLs and partnered across teams to scale content, automation, and campaign execution.</li>
+      </ul>
+    </div>
+    <hr class="role-divider">
+
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title"><span class="co">Vendavo</span> — Senior Director, Global Marketing Programs</div>
+        <div class="role-dates">2017–2021</div>
+      </div>
+      <div class="role-context">Enterprise pricing and revenue optimization software. Led global demand generation and marketing operations as company revenue grew from approximately $45M to $78M.</div>
+      <ul class="bullets">
+        <li>Delivered 14 consecutive quarters of double-digit MQL and pipeline growth, supporting a 54% increase in SaaS revenue.</li>
+        <li>Built and expanded a marketing organization to approximately 15 across the U.S. and Europe, spanning demand, product marketing, content, and BDRs.</li>
+        <li>Rebuilt attribution across Salesforce and Marketo; connected global programs, vertical messaging, and field execution to Sales priorities.</li>
+        <li>Expanded team and program coverage through international growth and acquisitions; balanced strategy with hands-on operational leadership.</li>
+      </ul>
+    </div>
+    <hr class="role-divider">
+
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title"><span class="co">4INFO</span> — Senior Director of Marketing</div>
+        <div class="role-dates">2015–2017</div>
+      </div>
+      <div class="role-context">Advertising technology business serving brands and agencies.</div>
+      <ul class="bullets">
+        <li>Managed a $1.5M media budget across digital, print, and events; led vertical messaging, sales enablement, marketing automation, and campaign execution.</li>
+      </ul>
+    </div>
+    <hr class="role-divider">
+
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title"><span class="co">MapQuest</span> — Enterprise Solutions &amp; Product Marketing</div>
+        <div class="role-dates">2011–2015</div>
+      </div>
+      <div class="role-context">Director, Enterprise Solutions Marketing (2014–2015); Product Marketing Manager (2011–2015).</div>
+      <ul class="bullets">
+        <li>Led enterprise positioning, lead generation, content, and business development; managed Salesforce-driven scoring, conversion, and nurture programs.</li>
+        <li>Owned consumer product positioning, competitive analysis, and audience personas; led go-to-market campaigns for major iOS and Android launches across paid, earned, and owned media.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-title">Earlier Experience</p>
+
+    <div class="earlier-item">
+      <div class="earlier-head">
+        <div class="role-title"><span class="co">Allen Company</span> — Senior Marketing Manager</div>
+        <div class="role-dates">2009–2011</div>
+      </div>
+      <div class="earlier-desc">Built the in-house creative services team, including designers, photo/video, and project management; directed brand and campaigns supporting 2,000+ SKUs and private-label retail brands.</div>
+    </div>
+
+    <div class="earlier-item">
+      <div class="earlier-head">
+        <div class="role-title"><span class="co">The Integer Group</span> — Advertising Project Manager</div>
+        <div class="role-dates">2007–2009</div>
+      </div>
+      <div class="earlier-desc">Managed integrated campaigns for national brands, coordinating budgets, creative, and delivery across 70+ concurrent initiatives.</div>
+    </div>
+
+    <div class="earlier-item">
+      <div class="earlier-head">
+        <div class="role-title"><span class="co">Classic Sport Companies</span> — Category Marketing Manager</div>
+        <div class="role-dates">1999–2007</div>
+      </div>
+      <div class="earlier-desc">Progressive responsibility across design, brand positioning, digital content, public relations, and events.</div>
+    </div>
+  </div>
+
+  <div class="footer-band">
+    <div class="footer-col tools">
+      <div class="footer-label">Technology</div>
+      <div class="footer-text">Salesforce · Marketo · Pardot · HubSpot · Google Analytics · Demandbase · RollWorks · Outreach · WordPress · Zapier · Google Ads · Adobe Creative Suite · AI-assisted marketing workflows</div>
+    </div>
+    <div class="footer-col edu">
+      <div class="footer-label">Education</div>
+      <div class="edu-line"><span class="school">BS, Marketing</span> — San Diego State University</div>
+      <div class="edu-line">Additional study in Mass Communication — University of the Pacific</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
