@@ -75,7 +75,6 @@
     .sheet { padding: 28px 18px 44px 18px; }
   }
 
-  /* ---------- Header ---------- */
   .header {
     display: flex;
     justify-content: space-between;
@@ -118,7 +117,25 @@
     .contact-block { text-align: left; }
   }
 
-  /* ---------- Sections ---------- */
+  .pdf-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 18px;
+    background: var(--amber-700);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 999px;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .pdf-button:hover {
+    opacity: 0.92;
+  }
+
   .section { margin-top: 30px; }
   .section-title {
     font-family: "Poppins", sans-serif;
@@ -134,7 +151,6 @@
     font-size: 1rem;
   }
 
-  /* ---------- Core expertise ---------- */
   .expertise-box {
     margin-top: 12px;
     border: 1px solid var(--amber-300);
@@ -166,7 +182,6 @@
     border-radius: 1px;
   }
 
-  /* ---------- Experience ---------- */
   .role { margin-top: 26px; }
   .role-head {
     display: flex;
@@ -221,7 +236,6 @@
     margin: 24px 0 0 0;
   }
 
-  /* ---------- Earlier experience ---------- */
   .earlier-item { margin-top: 14px; }
   .earlier-head {
     display: flex;
@@ -237,7 +251,6 @@
     margin-top: 2px;
   }
 
-  /* ---------- Footer ---------- */
   .footer-band {
     margin-top: 30px;
     padding-top: 18px;
@@ -271,6 +284,7 @@
     .sheet { max-width: none; padding: 0.4in 0.5in; }
     .role { break-inside: avoid; }
     .earlier-item { break-inside: avoid; }
+    .pdf-button { display: none; }
   }
 </style>
 </head>
@@ -288,6 +302,8 @@
       <div>heyambur@icloud.com</div>
     </div>
   </div>
+
+  <a class="pdf-button" href="ambur-cole-resume.pdf" download>Download PDF</a>
 
   <div class="section" style="margin-top:22px;">
     <p class="summary">I build high-performing marketing engines that turn strategy into measurable pipeline. Over 22+ years, I've led demand generation, product marketing, and brand strategy across growth-stage and enterprise SaaS — building revenue engines at business inflection points, transitioning organizations from sales-led to marketing-led GTM, and driving consistent double-digit pipeline growth in complex B2B and B2B2C environments. I thrive at the intersection of message and mechanism, shaping the story and architecting the engine behind it, with a structured, modern approach to growth and a deep bias for aligned execution across Sales, Product, and RevOps.</p>
