@@ -117,6 +117,33 @@
     .contact-block { text-align: left; }
   }
 
+  .social-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--amber-700);
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .social-link:hover {
+    opacity: 0.9;
+  }
+  .social-link svg {
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
+  }
+
   .pdf-button {
     display: inline-block;
     margin-top: 18px;
@@ -285,6 +312,7 @@
     .role { break-inside: avoid; }
     .earlier-item { break-inside: avoid; }
     .pdf-button { display: none; }
+    .social-link { display: none; }
   }
 </style>
 </head>
@@ -300,6 +328,13 @@
     <div class="contact-block">
       <div>Denver, CO &nbsp;&nbsp;(303) 949-3297</div>
       <div>heyambur@icloud.com</div>
+      <div class="social-row">
+        <a class="social-link" href="https://www.linkedin.com/in/amburcole/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.94 8.5A1.56 1.56 0 1 1 6.94 5.38a1.56 1.56 0 0 1 0 3.12ZM5.5 9.75h2.88v8.75H5.5V9.75Zm4.66 0h2.75v1.2h.04c.38-.72 1.31-1.47 2.7-1.47 2.88 0 3.41 1.89 3.41 4.35v6.67h-2.87v-6.24c0-1.49-.03-3.4-2.07-3.4-2.08 0-2.4 1.62-2.4 3.29v6.35H10.16V9.75Z"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 
