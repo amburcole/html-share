@@ -86,9 +86,8 @@
     margin: 0;
   }
   .hero {
-    margin-top: clamp(44px, 7vw, 76px);
-    padding: clamp(44px, 7vw, 76px) 0;
-    border-top: 1px solid var(--rule);
+    margin-top: 0;
+    padding: 48px 0;
     border-bottom: 2px solid var(--amber-600);
   }
   .headline {
@@ -96,22 +95,20 @@
     margin: 0;
     font-family: "Manrope", "Segoe UI", sans-serif;
     font-style: normal;
-    font-weight: 600;
-    font-size: clamp(3rem, 3vw, 3.25rem);
-    color: var(--amber-900);
-    line-height: 1.12;
+    font-weight: 500;
+    font-size: clamp(2rem, 3.34vw, 3rem);
+    color: #262220;
+    line-height: 1.2;
     text-wrap: balance;
   }
   .headline .serif {
     font-family: "Cormorant Garamond", Georgia, serif;
     font-style: italic;
-    font-size: 1.12em;
+    font-size: 1.08em;
     font-weight: 600;
-    color: inherit;
-    white-space: nowrap;
+    color: #B5691E;
   }
   .desktop-break { display: initial; }
-  .nowrap { white-space: nowrap; }
   .actions-row {
     display: flex;
     align-items: center;
@@ -334,12 +331,10 @@
 
   @media (max-width: 600px) {
     .hero {
-      margin-top: 48px;
-      padding: clamp(44px, 12vw, 60px) 0;
+      padding: 48px 0;
     }
     .headline {
-      font-size: clamp(2rem, 8.5vw, 2.5rem);
-      line-height: 1.15;
+      font-size: clamp(2rem, 8.5vw, 2.25rem);
     }
     .desktop-break { display: none; }
   }
@@ -393,7 +388,7 @@
   </div>
 
   <section class="hero" aria-label="Professional statement">
-    <h1 class="headline">Where bold <em class="serif">storytelling</em> meets<span class="desktop-break"><br></span> a rigorous <span class="nowrap"><em class="serif">growth</em> engine.</span></h1>
+    <h1 class="headline">Where bold <em class="serif">storytelling</em> meets<span class="desktop-break"><br></span> a rigorous <em class="serif">growth</em> engine.</h1>
   </section>
 
   <div class="section" style="margin-top:22px;">
