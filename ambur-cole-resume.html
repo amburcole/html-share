@@ -72,76 +72,74 @@
   }
 
   @media (max-width: 600px) {
-    .sheet { padding: 28px 18px 44px 18px; }
+    .sheet { padding: 28px 26px 44px; }
   }
 
   .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 10px 24px;
-    padding-bottom: 16px;
-    border-bottom: 2px solid var(--amber-600);
+    padding-bottom: 12px;
   }
   .name {
     font-family: "Manrope", "Segoe UI", sans-serif;
-    font-weight: 800;
-    font-size: 2.15rem;
+    font-weight: 700;
+    font-size: 1.5rem;
     color: var(--ink);
-    letter-spacing: 0.2px;
     margin: 0;
   }
+  .hero {
+    padding: clamp(42px, 8vw, 76px) 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 2px solid var(--amber-600);
+  }
   .headline {
-    margin-top: 5px;
-    font-family: "Manrope", "Segoe UI", sans-serif;
+    max-width: 740px;
+    margin: 0;
+    font-family: "Cormorant Garamond", Georgia, serif;
     font-style: normal;
-    font-weight: 600;
-    font-size: 1.15rem;
-    color: var(--amber-700);
-    line-height: 1.25;
+    font-weight: 500;
+    font-size: clamp(3.5rem, 5.6vw, 4.5rem);
+    color: var(--ink);
+    line-height: 1.05;
+    text-wrap: balance;
   }
   .headline .serif {
-    font-family: "Cormorant Garamond", Georgia, serif;
     font-style: italic;
-    font-weight: 600;
-    font-size: 1.32em;
-    letter-spacing: 0.02em;
     color: var(--amber-900);
-    display: inline-block;
-    transform: translateY(-0.02em);
   }
   .title-line {
-    margin-top: 5px;
-    font-size: 0.8rem;
-    letter-spacing: 0.08em;
+    font-size: 0.72rem;
+    letter-spacing: 0.07em;
     color: var(--gray);
     font-family: "Manrope", "Segoe UI", sans-serif;
     font-weight: 700;
   }
+  .supporting-info { padding-top: 18px; }
+  .contact-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin-top: 8px;
+  }
   .contact-block {
-    text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 14px;
     font-size: 0.85rem;
     color: var(--gray);
     line-height: 1.6;
-    padding-bottom: 3px;
-  }
-  @media (max-width: 600px) {
-    .contact-block { text-align: left; }
   }
 
   .social-row {
     display: flex;
-    justify-content: flex-end;
-    gap: 8px;
-    margin-top: 8px;
+    align-items: center;
+    gap: 6px;
   }
   .social-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     background: var(--amber-700);
     color: #fff;
@@ -153,15 +151,15 @@
     opacity: 0.9;
   }
   .social-link svg {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     fill: currentColor;
   }
 
   .pdf-button {
     display: inline-block;
-    margin-top: 18px;
-    padding: 10px 18px;
+    margin-top: 12px;
+    padding: 8px 15px;
     background: var(--amber-700);
     color: #fff;
     text-decoration: none;
@@ -320,28 +318,49 @@
   }
   .edu-line .school { font-weight: 700; color: var(--ink); }
 
+  @media (max-width: 600px) {
+    .hero { padding: 48px 0; }
+    .headline {
+      font-size: clamp(2.25rem, 10vw, 2.75rem);
+      line-height: 1.15;
+    }
+    .supporting-info { padding-top: 14px; }
+  }
+
   @media print {
     body { background: var(--paper); }
     .sheet { max-width: none; padding: 0.4in 0.5in; }
-    .role { break-inside: avoid; }
-    .earlier-item { break-inside: avoid; }
+    .header { padding-bottom: 4px; }
+    .name { font-size: 1.25rem; }
+    .hero { padding: 8px 0; }
+    .headline { font-size: 26px; line-height: 1.05; }
+    .supporting-info { padding-top: 8px; }
+    .contact-row { margin-top: 3px; }
     .pdf-button { display: none; }
     .social-link { display: none; }
+    .role { break-inside: avoid; }
+    .earlier-item { break-inside: avoid; }
   }
 </style>
 </head>
 <body>
 <div class="sheet">
 
-  <div class="header">
-    <div class="name-block">
-      <p class="name">Ambur Cole</p>
-      <div class="headline">I build <span class="serif">revenue engines</span> at business inflection points.</div>
-      <div class="title-line">GROWTH MARKETING / DEMAND GENERATION / PRODUCT MARKETING</div>
-    </div>
-    <div class="contact-block">
-      <div>Denver, CO &nbsp;&nbsp;(303) 949-3297</div>
-      <div>heyambur@icloud.com</div>
+  <header class="header">
+    <p class="name">Ambur Cole</p>
+  </header>
+
+  <section class="hero" aria-label="Professional statement">
+    <h1 class="headline">I build <em class="serif">revenue engines</em> at business inflection points.</h1>
+  </section>
+
+  <div class="supporting-info">
+    <div class="title-line">GROWTH MARKETING / DEMAND GENERATION / PRODUCT MARKETING</div>
+    <div class="contact-row">
+      <div class="contact-block">
+        <div>Denver, CO &nbsp;&nbsp;(303) 949-3297</div>
+        <div>heyambur@icloud.com</div>
+      </div>
       <div class="social-row">
         <a class="social-link" href="https://www.linkedin.com/in/amburcole/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
           <svg viewBox="0 0 24 24" aria-hidden="true">
